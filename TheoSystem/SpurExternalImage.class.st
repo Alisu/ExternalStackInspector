@@ -27,6 +27,13 @@ SmalltalkImage newImage: '/Users/Pharo/images/TestImage2/TestImage2.image' withA
 	<primitive: 123>
 ]
 
+{ #category : #accessing }
+SpurExternalImage >> GIVElement: aString ofInterpreter: anInt [
+	
+	<primitive: 153>
+	self primitiveFail 
+]
+
 { #category : #formatting }
 SpurExternalImage >> format [ 
 	"64 bits for me for you i don't know"
@@ -85,8 +92,7 @@ SpurExternalImage >> nilObjectAddress [
 { #category : #stepping }
 SpurExternalImage >> nilObjectAddress: anInt [
 	 
-	<primitive: 152>
-	self primitiveFail 
+	^self GIVElement: 'nilObj' ofInterpreter: anInt
 ]
 
 { #category : #accessing }
@@ -102,8 +108,7 @@ SpurExternalImage >> oldBaseAddress [
 { #category : #accessing }
 SpurExternalImage >> oldBaseAddress: anInt [
 	
-	<primitive: 153>
-	self primitiveFail 
+	^self GIVElement: 'oldSpaceStart' ofInterpreter: anInt 
 ]
 
 { #category : #printing }
