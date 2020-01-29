@@ -22,7 +22,7 @@ StackFrameHandler >> init [
 	method := self method.
 	"flags := self flags."
 	linkedContext := self linkedContext.
-	"pc := self pc."
+	pc := self pc.
 	receiver := self receiver.
 	sender := self sender.
 ]
@@ -43,6 +43,14 @@ StackFrameHandler >> method [
 
 { #category : #accessing }
 StackFrameHandler >> pc [
+"Instruction Pointer - method pointer - 8 + 1"
+
+	| ip methodP |
+	ip := self image GIVElement: 'instructionPointer' ofInterpreter: self image myGIVNumber.
+	methodP := self image GIVElement: 'method' ofInterpreter: self image myGIVNumber.
+
+	pc := ip asInteger - methodP asInteger - 7.
+	^pc
 ]
 
 { #category : #accessing }
