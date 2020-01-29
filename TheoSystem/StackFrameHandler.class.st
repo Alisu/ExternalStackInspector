@@ -1,3 +1,6 @@
+"
+I am a proxy for stack frames
+"
 Class {
 	#name : #StackFrameHandler,
 	#superclass : #SpurObject,

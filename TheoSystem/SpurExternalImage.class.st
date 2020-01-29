@@ -1,3 +1,9 @@
+"
+I launch new OS threads thaht will start a new interpreter working with the specified image
+
+image := SpurExternalImage newImage: '/path/to/image' withArguments: 'eval 10 factorial'.
+
+"
 Class {
 	#name : #SpurExternalImage,
 	#superclass : #SpurImage,

@@ -1,3 +1,6 @@
+"
+I am a proxy to represent the memory of an image 
+"
 Class {
 	#name : #SpExternalMemory,
 	#superclass : #Object,
