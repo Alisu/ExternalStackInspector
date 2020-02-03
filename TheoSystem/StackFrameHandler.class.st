@@ -1,6 +1,3 @@
-"
-I am a proxy for stack frames
-"
 Class {
 	#name : #StackFrameHandler,
 	#superclass : #SpurObject,
@@ -14,6 +11,14 @@ Class {
 	],
 	#category : #TheoSystem
 }
+
+{ #category : #'as yet unclassified' }
+StackFrameHandler class >> on: address image: anImage [
+	| instance |
+	instance := super on: address image: anImage.
+	^instance init.
+	
+]
 
 { #category : #accessing }
 StackFrameHandler >> flags [
